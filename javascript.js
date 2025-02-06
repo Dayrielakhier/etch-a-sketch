@@ -15,7 +15,7 @@ function generateGrids(grids) {
         for (i = 0; i < grids; i++) {
         const row = document.createElement("div")
         row.classList.add("row")
-            for (j = 0;j < grids; j++) {
+            for (j = 0; j < grids; j++) {
             const grid = document.createElement("div")
             grid.classList.add("grid")
             grid.addEventListener("mouseenter", function () {
