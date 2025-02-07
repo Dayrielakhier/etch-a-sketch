@@ -7,6 +7,14 @@ function getGrids() {
 
 btn.addEventListener("click", () => generateGrids(getGrids()))
 
+function randColorNum() {
+    return Math.floor(Math.random() * 256)
+}
+
+function randomRGB() {
+    return `rgb(${randColorNum()}, ${randColorNum()}, ${randColorNum()})`
+}
+
 function generateGrids(grids) {
     if (grids < 1 || grids > 100) {
         console.log("Type a number between 1-100")
@@ -19,7 +27,7 @@ function generateGrids(grids) {
             const grid = document.createElement("div")
             grid.classList.add("grid")
             grid.addEventListener("mouseenter", function () {
-                grid.style.background = "blue"
+                grid.style.background = randomRGB()
             })
             grid.addEventListener("mouseleave", function () {
                 grid.style.background = "initial"
